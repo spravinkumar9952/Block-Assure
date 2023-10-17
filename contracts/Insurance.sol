@@ -2,9 +2,10 @@
 
 
 // Enable optimizer
-pragma solidity ^0.8.0;
+ pragma solidity >=0.6.0 <0.8.0;
+ pragma experimental ABIEncoderV2;
 
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract Insurance{
     using SafeMath for uint256;
