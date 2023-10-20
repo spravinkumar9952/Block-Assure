@@ -14,6 +14,10 @@ export default function InsuranceHome() {
         const address = process.env.REACT_APP_CONTRACT_ADDRESS; 
         const contract = new web3.eth.Contract(InsuranceABI.abi, address);
         const accounts = await web3.eth.getAccounts();
+        
+        console.log("Connected to metamask with address:", accounts[0]);
+        // console.log("Balance of the account", web3.eth.getBalance)
+        web3.eth.getBalance("0x5a6cA8D4d415ca1903aCf56Ce72eB6C208d626B7").then(console.log);
 
         contract.methods.getPolicyDetails(accounts[0]).call({gas: 3000000})
         .then(res => {

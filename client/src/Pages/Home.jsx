@@ -20,6 +20,7 @@ export default function Home() {
                 setWeb3(web3);
                 const accounts = await web3.eth.getAccounts();
                 console.log("Connected to metamask with address:", accounts[0]);
+                web3.eth.getBalance("0x5a6cA8D4d415ca1903aCf56Ce72eB6C208d626B7").then(console.log);
                 navigator('/insuranceHome');
             } catch (error) {
                 console.error(error);
