@@ -1,0 +1,19 @@
+version: '3'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    ports:
+      - "3000:3000"
+    # Add any other necessary configurations
+
+  solidity-compiler:
+    build:
+      context: .
+      dockerfile: Dockerfile # Adjust the name of the Solidity Dockerfile
+    ports:
+      - "7545:7545"
+    volumes:
+      - ./root:/app
+    # Add any other necessary configurations

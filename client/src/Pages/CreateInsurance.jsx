@@ -21,7 +21,7 @@ export default function CreateInsurance() {
     const [premiumAmount, setPremiumAmount] = useState(0);
     const [phoneNo, setPhoneNo] = useState(0);
     const [email, setEmail] = useState("");
-    const [position, setPosition] = useState([]);
+    const [position, setPosition] = useState([0, 0]);
     const [isSubmited, setIsSubmited] = useState(false);
 
 
@@ -77,7 +77,7 @@ export default function CreateInsurance() {
                         <input type="email" name="email" id="email" placeholder='Email Id' />
                         <input type="number" name="area" id="area" placeholder='Area in Square feet'/>
                        
-
+{/* 
                         <MapPicker defaultLocation={defaultLocation}
                             zoom={zoom}
                             mapTypeId="roadmap"
@@ -85,7 +85,7 @@ export default function CreateInsurance() {
                             onChangeLocation={handleChangeLocation}
                             onChangeZoom={handleChangeZoom}
                             apiKey='AIzaSyD07E1VvpsN_0FvsmKAj4nK9GnLq-9jtj8'
-                        /> 
+                        />  */}
 
                         <button onClick={handleSubmit}>Estimate the premium amount</button>
                     </form>
